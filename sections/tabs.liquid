@@ -1,5 +1,9 @@
-{{ 'faq-tabs.css' | asset_url | stylesheet_tag }}
-{{ 'section-review-swiper-slider.css' | asset_url | stylesheet_tag }}
+{{ 'tabs.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+<script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/accordion-js@3.1.0/dist/accordion.min.css">
+<script async src="https://unpkg.com/accordion-js@3.1.0/dist/accordion.min.js"></script>
 
 <section class="page-width faq-tabs">
   <ul class="tabs">
@@ -29,15 +33,14 @@
 
   <div class="tabs-content">
     {% assign count = 0 %}
-
     <div class="tabs-panel active" data-index="{% increment count %}">
       <div class="wrap wrap-review">
-        {% if product.metafields.custom.reviews != blank %}
-          <div class="swiper review-slider slider-container swiper-review-slider swiper-container">
-            <div class="reviews__wrapper swiper-wrapper"></div>
+        {% if product.metafields.custom.tabs_panel_1 != blank %}
+          <div class="swiper">
+            <div class="swiper-wrapper reviews__wrapper"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
-          <button class="swiper-arrow swiper-button-next"></button>
-          <button class="swiper-arrow swiper-button-prev"></button>
         {% else %}
           <p class="reviews--not-found">{{ section.settings.data_not_found_first_tab }}</p>
         {%- endif -%}
@@ -82,14 +85,34 @@
   </div>
 </section>
 
-{% if product.metafields.custom.reviews != blank %}
-  {%- assign reviews_ = product.metafields.custom.reviews -%}
+{% if product.metafields.custom.tabs_panel_1 != blank %}
+  {%- assign reviews_ = product.metafields.custom.tabs_panel_1 -%}
 {% else %}
   {%- assign reviews_ = 'false' -%}
 {% endif %}
 
 <script>
   document.addEventListener('DOMContentLoaded', (event) => {
+
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            480: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            640: {
+                slidesPerView: 4,
+                spaceBetween: 40
+            }
+        }
+    })
+
     const tabLinks = document.querySelectorAll('.tabs span');
     const tabPanels = document.querySelectorAll('.tabs-panel');
     for (let [i, el] of tabLinks.entries()) {
@@ -103,7 +126,7 @@
         panel[0].classList.add('active');
       });
     }
-    new Accordion('.accordion-container');
+    
 
     const reviewsWrapper = document.querySelector('.reviews__wrapper');
     var rev = {{ reviews_ }};
@@ -125,7 +148,9 @@
         reviewsWrapper.appendChild(reviewItemWrapper);
       });
     }
-    swiperSliderInit()
+
+    new Accordion('.accordion-container');
+
   });
 </script>
 
