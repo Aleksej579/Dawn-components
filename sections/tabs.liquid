@@ -1,11 +1,10 @@
 {{ 'tabs.css' | asset_url | stylesheet_tag }}
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
-<script async src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+{{ 'swiper.css' | asset_url | stylesheet_tag }}
+{{ 'accordion.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper.js' | asset_url }}" defer></script>
+<script src="{{ 'accordion.js' | asset_url }}" defer></script>
 
-<link rel="stylesheet" href="https://unpkg.com/accordion-js@3.1.0/dist/accordion.min.css">
-<script async src="https://unpkg.com/accordion-js@3.1.0/dist/accordion.min.js"></script>
-
-<section class="page-width faq-tabs">
+<section class="page-width tabs__wrapper">
   <ul class="tabs">
     <li class="active">
       <span class="reviews-btn" style="color: {{ product.metafields.custom.tabs_title_color }}">
@@ -53,7 +52,7 @@
           {%- if product.metafields.custom.tabs_panel_2 != blank -%}
             {{ product.metafields.custom.tabs_panel_2 | metafield_tag }}
           {% else %}
-            <p class="reviews--not-found">{{ section.settings.data_not_found }}</p>
+            <p class="content--not-found">{{ section.settings.data_not_found }}</p>
           {%- endif -%}
         </div>
       </div>
