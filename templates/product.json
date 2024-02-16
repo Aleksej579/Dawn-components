@@ -92,13 +92,6 @@
           "settings": {
             "share_label": "Share"
           }
-        },
-        "app_tabs_star_rating_PEKM4K": {
-          "type": "shopify:\/\/apps\/app-tabs\/blocks\/star_rating\/3d46ae0c-e848-4302-b5cb-4e7a2cf4f47e",
-          "settings": {
-            "product": "{{product}}",
-            "colour": "#ff0000"
-          }
         }
       },
       "block_order": [
@@ -114,8 +107,7 @@
         "collapsible-row-1",
         "collapsible-row-2",
         "collapsible-row-3",
-        "share",
-        "app_tabs_star_rating_PEKM4K"
+        "share"
       ],
       "settings": {
         "enable_sticky_info": true,
@@ -241,6 +233,24 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "17080810611cd2b7ea": {
+      "type": "apps",
+      "blocks": {
+        "app_tabs_star_rating_TfkG4H": {
+          "type": "shopify:\/\/apps\/app-tabs\/blocks\/star_rating\/3d46ae0c-e848-4302-b5cb-4e7a2cf4f47e",
+          "settings": {
+            "product": "{{product}}",
+            "colour": "#ff0000"
+          }
+        }
+      },
+      "block_order": [
+        "app_tabs_star_rating_TfkG4H"
+      ],
+      "settings": {
+        "include_margins": true
+      }
     }
   },
   "order": [
@@ -248,6 +258,7 @@
     "image-with-text",
     "multicolumn",
     "tabs",
-    "related-products"
+    "related-products",
+    "17080810611cd2b7ea"
   ]
 }
