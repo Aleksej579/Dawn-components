@@ -207,6 +207,7 @@
     },
     "tabs": {
       "type": "tabs",
+      "disabled": true,
       "settings": {
         "reviews": "REVIEWS",
         "nutritional_information": "NUTRITIONAL INFORMATION",
