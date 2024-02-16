@@ -240,7 +240,7 @@
         "app_tabs_star_rating_ybFQrL": {
           "type": "shopify:\/\/apps\/app-tabs\/blocks\/star_rating\/3d46ae0c-e848-4302-b5cb-4e7a2cf4f47e",
           "settings": {
-            "product": "",
+            "product": "product",
             "colour": "#ff0000"
           }
         },
