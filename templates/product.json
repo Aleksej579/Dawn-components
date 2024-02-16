@@ -240,8 +240,12 @@
         "app_tabs_star_rating_ybFQrL": {
           "type": "shopify:\/\/apps\/app-tabs\/blocks\/star_rating\/3d46ae0c-e848-4302-b5cb-4e7a2cf4f47e",
           "settings": {
-            "product": "{{product}}",
-            "colour": "#ff0000"
+            "reviews": "Reviews",
+            "nutritional_information": "Nutritional information",
+            "directions": "Directions",
+            "faqs": "FAQs",
+            "data_not_found_first_tab": "No Data",
+            "data_not_found": "No Data"
           }
         }
       },
