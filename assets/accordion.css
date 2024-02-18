@@ -1,0 +1,61 @@
+@charset "UTF-8";
+/*!
+ * https://github.com/michu2k/Accordion
+ */
+.ac {
+    margin-top: 10px;
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(var(--color-foreground), .08);
+}
+.ac .ac-header {
+    margin: 0;
+    padding: 0
+}
+.ac .ac-trigger {
+    text-align: left;
+    width: 100%;
+    padding: 10px 30px 10px 10px;
+    display: block;
+    cursor: pointer;
+    background-color: transparent;
+    -webkit-transition: color .25s ease;
+    transition: color .25s ease;
+    position: relative;
+    text-decoration: none;
+    margin: 0;
+    border: 0;
+    font-family: MADESoulmazeOutline;
+    font-weight: 600;
+}
+.ac .ac-trigger::after {
+    content: '+';
+    text-align: center;
+    width: 15px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    font-family: MADESoulmaze;
+    font-weight: 100;
+}
+.ac .ac-panel {
+    overflow: hidden;
+    -webkit-transition-property: height, visibility;
+    transition-property: height, visibility;
+    -webkit-transition-timing-function: ease;
+    transition-timing-function: ease
+}
+.ac .ac-panel .ac-text {
+    padding: 10px;
+    margin: 0
+}
+.ac.js-enabled .ac-panel {
+    visibility: hidden
+}
+.ac.is-active .ac-panel {
+    visibility: visible
+}
+.ac.is-active .ac-trigger::after {
+    content: '\2013'
+}

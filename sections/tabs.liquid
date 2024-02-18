@@ -1,43 +1,45 @@
-{{ 'faq-tabs.css' | asset_url | stylesheet_tag }}
-{{ 'section-review-swiper-slider.css' | asset_url | stylesheet_tag }}
+{{ 'tabs.css' | asset_url | stylesheet_tag }}
+{{ 'swiper.css' | asset_url | stylesheet_tag }}
+{{ 'accordion.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'swiper.js' | asset_url }}" defer></script>
+<script src="{{ 'accordion.js' | asset_url }}" defer></script>
 
-<section class="page-width faq-tabs">
+<section class="page-width tabs__wrapper">
   <ul class="tabs">
     <li class="active">
-      <span class="reviews-btn" style="color: {{ product.metafields.custom.tabs_title_color }}">
+      <h5 class="reviews-btn" style="color: {{ product.metafields.custom.tabs_title_color }}">
         {{- section.settings.reviews -}}
-      </span>
+      </h5>
     </li>
     {%- if product.metafields.custom.tabs_panel_2 != blank -%}
       <li>
-        <span style="color: {{ product.metafields.custom.tabs_title_color }}">
+        <h5 style="color: {{ product.metafields.custom.tabs_title_color }}">
           {{- section.settings.nutritional_information -}}
-        </span>
+        </h5>
       </li>
     {%- endif -%}
     {%- if product.metafields.custom.tabs_panel_3 != blank -%}
       <li>
-        <span style="color: {{ product.metafields.custom.tabs_title_color }}">{{ section.settings.directions }}</span>
+        <h5 style="color: {{ product.metafields.custom.tabs_title_color }}">{{ section.settings.directions }}</h5>
       </li>
     {%- endif -%}
     {%- if product.metafields.custom.tabs_panel_4 != blank -%}
       <li>
-        <span style="color: {{ product.metafields.custom.tabs_title_color }}">{{ section.settings.faqs }}</span>
+        <h5 style="color: {{ product.metafields.custom.tabs_title_color }}">{{ section.settings.faqs }}</h5>
       </li>
     {%- endif -%}
   </ul>
 
   <div class="tabs-content">
     {% assign count = 0 %}
-
     <div class="tabs-panel active" data-index="{% increment count %}">
       <div class="wrap wrap-review">
-        {% if product.metafields.custom.reviews != blank %}
-          <div class="swiper review-slider slider-container swiper-review-slider swiper-container">
-            <div class="reviews__wrapper swiper-wrapper"></div>
+        {% if product.metafields.custom.tabs_panel_1 != blank %}
+          <div class="swiper">
+            <div class="swiper-wrapper reviews__wrapper"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
           </div>
-          <button class="swiper-arrow swiper-button-next"></button>
-          <button class="swiper-arrow swiper-button-prev"></button>
         {% else %}
           <p class="reviews--not-found">{{ section.settings.data_not_found_first_tab }}</p>
         {%- endif -%}
@@ -50,7 +52,7 @@
           {%- if product.metafields.custom.tabs_panel_2 != blank -%}
             {{ product.metafields.custom.tabs_panel_2 | metafield_tag }}
           {% else %}
-            <p class="reviews--not-found">{{ section.settings.data_not_found }}</p>
+            <p class="content--not-found">{{ section.settings.data_not_found }}</p>
           {%- endif -%}
         </div>
       </div>
@@ -82,15 +84,35 @@
   </div>
 </section>
 
-{% if product.metafields.custom.reviews != blank %}
-  {%- assign reviews_ = product.metafields.custom.reviews -%}
+{% if product.metafields.custom.tabs_panel_1 != blank %}
+  {%- assign reviews_ = product.metafields.custom.tabs_panel_1 -%}
 {% else %}
   {%- assign reviews_ = 'false' -%}
 {% endif %}
 
 <script>
   document.addEventListener('DOMContentLoaded', (event) => {
-    const tabLinks = document.querySelectorAll('.tabs span');
+
+    const swiper = new Swiper('.swiper', {
+        slidesPerView: 4,
+        spaceBetween: 10,
+        breakpoints: {
+            320: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            480: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            },
+            640: {
+                slidesPerView: 4,
+                spaceBetween: 40
+            }
+        }
+    })
+
+    const tabLinks = document.querySelectorAll('.tabs h5');
     const tabPanels = document.querySelectorAll('.tabs-panel');
     for (let [i, el] of tabLinks.entries()) {
       el.addEventListener('click', (e) => {
@@ -103,7 +125,7 @@
         panel[0].classList.add('active');
       });
     }
-    new Accordion('.accordion-container');
+    
 
     const reviewsWrapper = document.querySelector('.reviews__wrapper');
     var rev = {{ reviews_ }};
@@ -125,7 +147,9 @@
         reviewsWrapper.appendChild(reviewItemWrapper);
       });
     }
-    swiperSliderInit()
+
+    new Accordion('.accordion-container');
+
   });
 </script>
 
