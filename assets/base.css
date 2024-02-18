@@ -71,8 +71,26 @@
   --shadow-visible: var(--media-shadow-visible);
 }
 
-/* base */
 
+/* custom fonts */
+@font-face {
+  font-family: 'DrukShop';
+  src: url("DrukWide.otf") format("opentype");
+}
+@font-face {
+  font-family: 'DankMonoItalic';
+  src: url("DankMonoItalic.otf") format("opentype");
+}
+@font-face {
+  font-family: 'MADESoulmazeOutline';
+  src: url("MADESoulmazeOutline.otf") format("opentype");
+}
+@font-face {
+  font-family: 'MADESoulmaze';
+  src: url("MADESoulmaze.otf") format("opentype");
+}
+
+/* base */
 .no-js:not(html) {
   display: none !important;
 }
