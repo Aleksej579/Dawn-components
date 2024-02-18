@@ -207,7 +207,6 @@
     },
     "tabs": {
       "type": "tabs",
-      "disabled": true,
       "settings": {
         "reviews": "REVIEWS",
         "nutritional_information": "NUTRITIONAL INFORMATION",
@@ -237,22 +236,6 @@
     },
     "1708082556f6f7912e": {
       "type": "apps",
-      "blocks": {
-        "app_tabs_tabs_3NJwwG": {
-          "type": "shopify:\/\/apps\/app-tabs\/blocks\/tabs\/3d46ae0c-e848-4302-b5cb-4e7a2cf4f47e",
-          "settings": {
-            "reviews": "Reviews",
-            "nutritional_information": "Nutritional information",
-            "directions": "Directions",
-            "faqs": "FAQs",
-            "data_not_found_first_tab": "No Data",
-            "data_not_found": "No Data"
-          }
-        }
-      },
-      "block_order": [
-        "app_tabs_tabs_3NJwwG"
-      ],
       "settings": {
         "include_margins": true
       }
