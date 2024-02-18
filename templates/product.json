@@ -12,12 +12,8 @@
         },
         "title": {
           "type": "title",
-<<<<<<< HEAD
-          "settings": {}
-=======
           "settings": {
           }
->>>>>>> 156b638703df95246d62f499760bfd81fd7f52e9
         },
         "caption": {
           "type": "text",
@@ -28,27 +24,20 @@
         },
         "price": {
           "type": "price",
-<<<<<<< HEAD
-          "settings": {}
-=======
           "settings": {
           }
->>>>>>> 156b638703df95246d62f499760bfd81fd7f52e9
         },
         "variant_picker": {
           "type": "variant_picker",
           "settings": {
-            "picker_type": "button"
+            "picker_type": "button",
+            "swatch_shape": "circle"
           }
         },
         "quantity_selector": {
           "type": "quantity_selector",
-<<<<<<< HEAD
-          "settings": {}
-=======
           "settings": {
           }
->>>>>>> 156b638703df95246d62f499760bfd81fd7f52e9
         },
         "buy_buttons": {
           "type": "buy_buttons",
@@ -59,12 +48,8 @@
         },
         "description": {
           "type": "description",
-<<<<<<< HEAD
-          "settings": {}
-=======
           "settings": {
           }
->>>>>>> 156b638703df95246d62f499760bfd81fd7f52e9
         },
         "collapsible-row-0": {
           "type": "collapsible_tab",
@@ -126,9 +111,13 @@
       ],
       "settings": {
         "enable_sticky_info": true,
+        "color_scheme": "",
         "media_size": "large",
         "constrain_to_viewport": true,
+        "media_fit": "contain",
         "gallery_layout": "stacked",
+        "media_position": "left",
+        "image_zoom": "lightbox",
         "mobile_thumbnails": "hide",
         "hide_variants": true,
         "enable_video_looping": false,
@@ -165,7 +154,9 @@
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
+        "section_color_scheme": "",
         "color_scheme": "scheme-2",
+        "image_behavior": "none",
         "mobile_content_alignment": "left",
         "padding_top": 36,
         "padding_bottom": 36
@@ -218,8 +209,8 @@
       "type": "tabs",
       "settings": {
         "reviews": "REVIEWS",
-        "nutritional_information": "NUTRITIONAL INFORMATION",
-        "directions": "DIRECTIONS",
+        "nutritional_information": "INFORMATION 1",
+        "directions": "INFORMATION 2",
         "faqs": "FAQs",
         "data_not_found_first_tab": "Reviews is not found!",
         "data_not_found": "Content in update!"
@@ -230,9 +221,11 @@
       "settings": {
         "heading": "You may also like",
         "heading_size": "h2",
+        "products_to_show": 4,
         "columns_desktop": 4,
         "color_scheme": "scheme-1",
         "image_ratio": "square",
+        "image_shape": "default",
         "show_secondary_image": true,
         "show_vendor": false,
         "show_rating": false,
