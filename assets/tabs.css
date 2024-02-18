@@ -162,23 +162,9 @@
 .tabs__wrapper .accordion-container {
     width: 100%;
 }
-
-.tabs__wrapper .ac-text,
-.tabs__wrapper .ac-trigger {
-    /* font-family: Metropolis, sans-serif !important; */
-    font-weight: 400 !important;
-}
-.tabs__wrapper .ac-trigger {
-    font-size: 17px !important;
-}
 .content--not-found {
     text-align: center;
     width: 100%;
-}
-.ac-trigger {
-    font-size: 15px !important;
-    font-weight: 500 !important;
-    color: var(--color-primary) !important;
 }
 @media (max-width: 425px) {
     .ac-trigger {

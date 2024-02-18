@@ -1,27 +1,17 @@
 @charset "UTF-8";
-
 /*!
- * Accordion v3.1.0
- * Simple accordion created in pure Javascript.
  * https://github.com/michu2k/Accordion
- *
- * Copyright (c) Michał Strumpf
- * Published under MIT License
  */
 .ac {
     margin-top: 10px;
-    background-color: #fff;
     box-sizing: border-box;
-    border-bottom: 1px solid #eee;
+    border-bottom: 1px solid rgba(var(--color-foreground), .08);
 }
-
 .ac .ac-header {
     margin: 0;
     padding: 0
 }
-
 .ac .ac-trigger {
-    color: #111;
     text-align: left;
     width: 100%;
     padding: 10px 30px 10px 10px;
@@ -33,9 +23,10 @@
     position: relative;
     text-decoration: none;
     margin: 0;
-    border: 0
+    border: 0;
+    font-family: MADESoulmazeOutline;
+    font-weight: 600;
 }
-
 .ac .ac-trigger::after {
     content: '+';
     text-align: center;
@@ -44,13 +35,10 @@
     transform: translate(0, -50%);
     position: absolute;
     right: 10px;
-    top: 50%
+    top: 50%;
+    font-family: MADESoulmaze;
+    font-weight: 100;
 }
-
-.ac .ac-trigger:focus {
-    color: #8a8a8a
-}
-
 .ac .ac-panel {
     overflow: hidden;
     -webkit-transition-property: height, visibility;
@@ -58,22 +46,16 @@
     -webkit-transition-timing-function: ease;
     transition-timing-function: ease
 }
-
 .ac .ac-panel .ac-text {
-    font-size: 15px;
-    color: #111;
     padding: 10px;
     margin: 0
 }
-
 .ac.js-enabled .ac-panel {
     visibility: hidden
 }
-
 .ac.is-active .ac-panel {
     visibility: visible
 }
-
 .ac.is-active .ac-trigger::after {
     content: '\2013'
 }
