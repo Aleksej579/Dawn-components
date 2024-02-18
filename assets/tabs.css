@@ -165,7 +165,7 @@
 
 .tabs__wrapper .ac-text,
 .tabs__wrapper .ac-trigger {
-    font-family: Metropolis, sans-serif !important;
+    /* font-family: Metropolis, sans-serif !important; */
     font-weight: 400 !important;
 }
 .tabs__wrapper .ac-trigger {
