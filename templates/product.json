@@ -209,8 +209,8 @@
       "type": "tabs",
       "settings": {
         "reviews": "REVIEWS",
-        "nutritional_information": "NUTRITIONAL INFORMATION",
-        "directions": "DIRECTIONS",
+        "nutritional_information": "INFORMATION 1",
+        "directions": "INFORMATION 2",
         "faqs": "FAQs",
         "data_not_found_first_tab": "Reviews is not found!",
         "data_not_found": "Content in update!"
