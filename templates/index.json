@@ -54,7 +54,16 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.<\/p><p><\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_mtiQGK": {
+          "type": "column",
+          "settings": {
+            "title": "Column",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -63,16 +72,7 @@
           "type": "column",
           "settings": {
             "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "link_label": "",
-            "link": ""
-          }
-        },
-        "column3": {
-          "type": "column",
-          "settings": {
-            "title": "Column",
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
+            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post.<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -80,8 +80,8 @@
       },
       "block_order": [
         "column1",
-        "column2",
-        "column3"
+        "column_mtiQGK",
+        "column2"
       ],
       "settings": {
         "title": "",
@@ -93,7 +93,7 @@
         "background_style": "none",
         "button_label": "",
         "button_link": "",
-        "color_scheme": "scheme-3",
+        "color_scheme": "scheme-5",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 16,
