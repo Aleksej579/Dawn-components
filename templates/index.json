@@ -6,6 +6,7 @@
         "slide_HFHbyt": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/2.jpg",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
@@ -23,6 +24,7 @@
         "slide_rEYyEQ": {
           "type": "slide",
           "settings": {
+            "image": "shopify:\/\/shop_images\/4.jpg",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
@@ -36,11 +38,30 @@
             "color_scheme": "",
             "text_alignment_mobile": "center"
           }
+        },
+        "slide_fdLLVW": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/1.jpg",
+            "heading": "Image slide",
+            "heading_size": "h1",
+            "subheading": "Tell your brand's story through images",
+            "button_label": "Button label",
+            "link": "",
+            "button_style_secondary": false,
+            "box_align": "middle-center",
+            "show_text_box": true,
+            "text_alignment": "center",
+            "image_overlay_opacity": 0,
+            "color_scheme": "scheme-1",
+            "text_alignment_mobile": "center"
+          }
         }
       },
       "block_order": [
         "slide_HFHbyt",
-        "slide_rEYyEQ"
+        "slide_rEYyEQ",
+        "slide_fdLLVW"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -138,6 +159,7 @@
         "button_G4c4pM"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/S928f3a1a4e0540df91d400f7c0462b90p.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -184,6 +206,7 @@
         "button_4kcqPD"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/Se8c6c45183ac4b128a7e12865a3406f9Y.webp",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "text_first",
@@ -204,20 +227,20 @@
         "collection-0": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "printful"
           }
         },
         "product": {
           "type": "product",
           "settings": {
-            "product": "",
+            "product": "smartphone-gimbal-3-axis-handheld-stabilizer-with-fill-light-for-cell-phone-iphone-13-pro-max-xiaomi-huawei-youtube-tiktok-vlog",
             "second_image": false
           }
         },
         "collection-1": {
           "type": "collection",
           "settings": {
-            "collection": ""
+            "collection": "frontpage"
           }
         }
       },
