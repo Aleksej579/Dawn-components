@@ -97,3 +97,14 @@
 .collection__view-all a:not(.link) {
   margin-top: 1rem;
 }
+
+/* new */
+.sort-by-tag a {
+  padding: 3px 12px;
+  color: var(--color-foreground);
+}
+.sort-by-tag .active {
+  border: 1px solid rgb(var(--color-foreground));
+  border-radius: 3px;
+  padding: 3px 12px;
+}

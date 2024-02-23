@@ -25,17 +25,12 @@
     }
   }
 {%- endstyle -%}
+{% for product_type in collection.all_types -%}
+  {{- product_type | link_to_type }}
+{%- endfor %}
 
 <div class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}">
   {%- paginate collection.products by section.settings.products_per_page -%}
-    {% comment %} Sort is the first tabbable element when filter type is vertical {% endcomment %}
-
-    {% comment %}
-      {% for tag in collection.all_tags %}
-        {{- tag | highlight_active_tag | link_to_tag: tag }}
-      {% endfor %}
-    {% endcomment %}
-
     {%- if section.settings.enable_sorting and section.settings.filter_type == 'vertical' -%}
       <facet-filters-form class="facets facets-vertical-sort page-width small-hide no-js-hidden">
         <form class="facets-vertical-form" id="FacetSortForm">
@@ -115,10 +110,12 @@
             paginate: paginate
           %}
 
-          Sort by tags:
-          {% for tag in collection.all_tags %}
-            {{- tag | highlight_active_tag | link_to_tag: tag }}
-          {% endfor %}
+          <div class="sort-by-tag">
+            Sort by tags:
+            {% for tag in collection.all_tags %}
+              {{- tag | highlight_active_tag | link_to_tag: tag }}
+            {% endfor %}
+          </div>
         </aside>
       {%- endif -%}
 
