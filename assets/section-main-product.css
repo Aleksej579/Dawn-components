@@ -253,6 +253,9 @@ a.product__text {
 
 .product__title > * {
   margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product__title > a {
