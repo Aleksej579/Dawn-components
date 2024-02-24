@@ -35,6 +35,7 @@
       assign ratio = 1
     endif
   -%}
+
   <div class="card-wrapper product-card-wrapper underline-links-hover">
     <div
       class="
@@ -77,7 +78,6 @@
                 height="{{ card_product.featured_media.height }}"
               >
               {% comment %}theme-check-enable ImgLazyLoading{% endcomment %}
-
               {%- if card_product.media[1] != null and show_secondary_image -%}
                 <img
                   srcset="
@@ -101,6 +101,27 @@
             </div>
           </div>
         {%- endif -%}
+
+        {%- if show_quick_add_variant -%}
+          <div class="variant-card__wrapper">
+            <p>{{ card_product.title }}</p>
+            <div class="wrapper__variant-item">
+              {% for variant in card_product.variants %}
+                {% if variant.available %}
+                  <span
+                    class="quickadd-variant"
+                    data-url="{{ card_product.url }}"
+                    data-variantid="{{ variant.id }}"
+                    data-varianttitle="{{ variant.title }}"
+                  >
+                    {{- variant.options -}}
+                  </span>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {%- endif -%}
+
         <div class="card__content">
           <div class="card__information">
             <h3
@@ -304,6 +325,7 @@
             {%- endif -%}
           </div>
         {%- endif -%}
+
         <div class="card__badge {{ settings.badge_position }}">
           {%- if card_product.available == false -%}
             <span
@@ -377,3 +399,110 @@
     </div>
   </div>
 {%- endif -%}
+
+<style>
+  .product-card-wrapper .card__content {
+    position: relative;
+  }
+  .variant-card__wrapper {
+    display: none;
+    text-align: center;
+    pointer-events: all;
+    z-index: 1;
+    padding: 10px;
+    position: absolute;
+    bottom: 9px;
+    max-height: calc(100% - 26px);
+    width: calc(100% - 26px);
+    left: 13px;
+    background-color: rgba(255, 255, 255, 0.8);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    cursor: pointer;
+    overflow-y: auto;
+  }
+  .product-card-wrapper .card__inner:hover .variant-card__wrapper {
+    display: block;
+  }
+  .variant-card__wrapper p {
+    font-size: 80%;
+    line-height: 16px;
+    font-weight: bold;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .variant-card__wrapper .wrapper__variant-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 8px;
+  }
+  .variant-card__wrapper .quickadd-variant {
+    font-size: 80%;
+    border: 1px solid black;
+    padding: 6px 12px;
+    border-radius: 3px;
+    display: block;
+    width: fit-content;
+    transition: all 0.3s;
+  }
+  .variant-card__wrapper .quickadd-variant:hover {
+    color: white;
+    background: black;
+  }
+  .alert__add_to_cart {
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    border: 1px solid black;
+    padding: 3px 24px;
+    border-radius: 6px;
+    background: white;
+  }
+</style>
+
+<script>
+  document.querySelectorAll('.quickadd-variant').forEach((item) => {
+    item.addEventListener('click', () => {
+      let formData = {
+        items: [
+          {
+            id: item.dataset.variantid,
+            quantity: 1,
+          },
+        ],
+      };
+
+      fetch(window.Shopify.routes.root + 'cart/add.js', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+        .then((response) => {
+          document.querySelectorAll('.header > p').forEach((item) => {
+            if (item.childNodes.length > 0) {
+              item.remove();
+            }
+          });
+          document.querySelector('.header').append(document.createElement('p'));
+          document.querySelector('.header > p').classList.add('alert__add_to_cart');
+          document.querySelector(
+            '.header > p'
+          ).innerHTML = `Product variant <b>'${item.dataset.varianttitle}'</b> add to cart!`;
+          setTimeout(() => {
+            document.querySelector('.header > p').style.visibility = 'hidden';
+          }, 4000);
+
+          return response.json();
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+    });
+  });
+</script>
