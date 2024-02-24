@@ -20,6 +20,7 @@
         "show_vendor": false,
         "show_rating": false,
         "enable_quick_add": false,
+        "enable_quick_add_variant": true,
         "enable_filtering": true,
         "filter_type": "horizontal",
         "enable_sorting": true,
