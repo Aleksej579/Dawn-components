@@ -37,10 +37,12 @@
                   >
                     {%- for childlink in link.links -%}
                       <li>
+                        ➝
                         <a
                           id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                           href="{{ childlink.url }}"
                           class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                          data-image=""
                           {% if childlink.current %}
                             aria-current="page"
                           {% endif %}
@@ -48,23 +50,46 @@
                           {{ childlink.title | escape }}
                         </a>
                         {%- if childlink.links != blank -%}
-                          <ul class="list-unstyled" role="list">
-                            {%- for grandchildlink in childlink.links -%}
-                              <li>
-                                <a
-                                  id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                  href="{{ grandchildlink.url }}"
-                                  class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                  data-image="{{ grandchildlink.object.image.src }}"
-                                  {% if grandchildlink.current %}
-                                    aria-current="page"
-                                  {% endif %}
-                                >
-                                  ➝ {{ grandchildlink.title | escape }}
-                                </a>
-                              </li>
-                            {%- endfor -%}
-                          </ul>
+                          <div class="wrapper__list-unstyled">
+                            <h3>Title 1</h3>
+                            <p>Sub-title 2</p>
+                            <ul class="list-unstyled" role="list">
+                              {%- for grandchildlink in childlink.links -%}
+                                <li>
+                                  <a
+                                    id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                    href="{{ grandchildlink.url }}"
+                                    class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                    data-image="{{ grandchildlink.object.image.src }}"
+                                    {% if grandchildlink.current %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    {{ grandchildlink.title | escape }}
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                            <h3>Title 2</h3>
+                            <p>Sub-title 2</p>
+                            <ul class="list-unstyled" role="list">
+                              {%- for grandchildlink in childlink.links -%}
+                                <li>
+                                  <a
+                                    id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                    href="{{ grandchildlink.url }}"
+                                    class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                    data-image="{{ grandchildlink.object.image.src }}"
+                                    {% if grandchildlink.current %}
+                                      aria-current="page"
+                                    {% endif %}
+                                  >
+                                    {{ grandchildlink.title | escape }}
+                                  </a>
+                                </li>
+                              {%- endfor -%}
+                            </ul>
+                          </div>
                         {%- endif -%}
                       </li>
                     {%- endfor -%}
@@ -98,11 +123,28 @@
 </nav>
 
 <script>
+  let megaMenuListLi = document.querySelectorAll('.mega-menu__list li');
+  megaMenuListLi.forEach((item) => {
+    item.addEventListener('mouseover', () => {
+      item.querySelector('.wrapper__list-unstyled').style.display = 'block';
+    });
+    item.addEventListener('mouseout', () => {
+      item.querySelector('.wrapper__list-unstyled').style.display = 'none';
+    });
+  });
+
   let megaMenuLink = document.querySelectorAll('.mega-menu__link');
   let megaMenuLinkInform = document.querySelector('.mega-menu__link-inform');
   megaMenuLink.forEach((item) => {
     item.addEventListener('mouseover', () => {
-      megaMenuLinkInform.innerHTML = `<img src='https://all-dev-theme.myshopify.com/cdn/shop/${item.dataset.image}' width=150>`;
+      if (item.dataset.image) {
+        megaMenuLinkInform.innerHTML = `<img src='https://all-dev-theme.myshopify.com/cdn/shop/${item.dataset.image}' width=150>`;
+      } else {
+        megaMenuLinkInform.innerHTML = `<img src='https://cdn.shopify.com/s/files/1/0633/3225/3877/files/portfolio-layout-thumb1_af152011-4280-4ed1-9865-0bcca25d3ab6.jpg' width=150>`;
+      }
+    });
+    item.addEventListener('mouseout', () => {
+      megaMenuLinkInform.innerHTML = '';
     });
   });
 </script>
