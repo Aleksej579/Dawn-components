@@ -1,7 +1,9 @@
 .mega-menu {
   position: static;
 }
-
+.mega-menu__wrapper {
+  display: flex;
+}
 .mega-menu__content {
   background-color: rgb(var(--color-background));
   border-left: 0;
@@ -14,6 +16,7 @@
   position: absolute;
   right: 0;
   top: 100%;
+  display: flex;
 }
 
 .shopify-section-header-sticky .mega-menu__content {
