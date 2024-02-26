@@ -47,7 +47,7 @@
     "custom_liquid_E98DWV": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<div id=\"shopify-block-1166917345295625399\" class=\"shopify-block shopify-app-block\" data-block-handle=\"wishlist\" bis_skin_checked=\"1\">\n  <mag-wishlist>\n    <a class=\"view-wishlist-bottom-btn right_bottom wishlist-footer\" data-value=\"2\" style=\"background-color: rgb(13, 127, 73);\">\n      <div class=\"wishlist-icon\" bis_skin_checked=\"1\"><\/div>\n    <\/a>\n  <\/mag-wishlist>\n\n<script type=\"text\/javascript\">\n  window.myappgurus = window.myappgurus || {};\n  if (typeof(window.myappgurus) != undefined) {\n    window.myappgurus.wishlist = {\n      \"target_class\" : \"\"\n    }\n  }\n<\/script>\n\n\n<\/div>",
+        "custom_liquid": "<a class=\"view-wishlist-bottom-btn right_bottom wishlist-footer\" data-value=\"2\" style=\"background-color: rgb(13, 127, 73);\">\n      <div class=\"wishlist-icon\" bis_skin_checked=\"1\"><\/div>\n    <\/a>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 52
