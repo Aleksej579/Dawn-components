@@ -43,10 +43,20 @@
         "padding_top": 8,
         "padding_bottom": 8
       }
+    },
+    "custom_liquid_E98DWV": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<mag-wishlist>\n    <a class=\"view-wishlist-bottom-btn right_bottom wishlist-footer\" data-value=\"2\" style=\"background-color: rgb(13, 127, 73);\">\n      <div class=\"wishlist-icon\" bis_skin_checked=\"1\"><\/div>\n    <\/a>\n  <\/mag-wishlist>",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "custom_liquid_E98DWV"
   ]
 }
