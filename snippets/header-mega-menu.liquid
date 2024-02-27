@@ -124,13 +124,26 @@
 </nav>
 
 <script>
-  window.addEventListener("load", () => {
+  window.addEventListener('load', () => {
+    document.querySelector('.mega-menu__wrapper').addEventListener('mouseenter', () => {
+      megaMenuWrapperSubLink.style.opacity = 1;
+      megaMenuWrapperSubLink.style.transition = 'all 0.5s';
+    });
+    document.querySelector('.mega-menu__wrapper').addEventListener('mouseleave', () => {
+      megaMenuWrapperSubLink.style.opacity = 0.3;
+      megaMenuWrapperSubLink.style.transition = 'all 0.5s';
+    });
+
     let megaMenuWrapperSubLink = document.querySelector('.mega-menu__wrapper-sub-link');
     let megaMenuListLi = document.querySelectorAll('.mega-menu__list li');
+    {% comment %} megaMenuWrapperSubLink.style.opacity = 0.3; {% endcomment %}
+    {% comment %} megaMenuWrapperSubLink.style.height = '0px'; {% endcomment %}
     megaMenuListLi.forEach((item) => {
       item.addEventListener('mouseover', () => {
         megaMenuWrapperSubLink.innerHTML = '';
-        megaMenuWrapperSubLink.style.display = 'block';
+        {% comment %} megaMenuWrapperSubLink.style.opacity = 1; {% endcomment %}
+        {% comment %} megaMenuWrapperSubLink.style.height = '300px'; {% endcomment %}
+        {% comment %} megaMenuWrapperSubLink.style.transition = 'all 0.5s'; {% endcomment %}
         megaMenuWrapperSubLink.appendChild(item.querySelector('.wrapper__list-unstyled').cloneNode(true));
 
         let megaMenuLink = document.querySelectorAll('.mega-menu__wrapper-sub-link a');
@@ -147,14 +160,12 @@
             megaMenuLinkInform.innerHTML = '';
           });
         });
-
       });
-
       item.addEventListener('mouseout', () => {
-        {% comment %} megaMenuWrapperSubLink.querySelector('.wrapper__list-unstyled').style.display = 'none'; {% endcomment %}
+        {% comment %} megaMenuWrapperSubLink.style.opacity = 0.3; {% endcomment %}
+        {% comment %} megaMenuWrapperSubLink.style.transition = 'all 0.5s'; {% endcomment %}
+        {% comment %} megaMenuWrapperSubLink.style.style.height = '0px'; {% endcomment %}
       });
     });
-
-    
   });
 </script>
