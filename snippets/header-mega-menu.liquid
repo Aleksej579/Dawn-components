@@ -92,7 +92,7 @@
                                     aria-current="page"
                                   {% endif %}
                                 >
-                                  {{ grandchildlink.title | escape }}
+                                  {{ grandchildlink.title | escape | truncate: 20 }}
                                 </a>
                               </li>
                             {%- endfor -%}

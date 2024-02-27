@@ -78,18 +78,29 @@
   display: none;
 }
 .mega-menu__wrapper-sub-link .wrapper__list-unstyled a:hover {
-    color: tomato;
-    font-weight: 600;
-    transition: all 0.3s;
+  color: tomato;
+  font-weight: 600;
+  transition: all 0.3s;
 }
 .mega-menu__list li {
   display: flex;
   border-radius: 3px;
   padding: 0 8px;
 }
+.mega-menu__list:not(.mega-menu__list.mega-menu__list--condensed) {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 15px;
+  border-right: none;
+}
 .mega-menu__list:not(.mega-menu__list.mega-menu__list--condensed) li {
   display: flex;
   flex-direction: column;
+  border: 1px solid transparent;
+}
+.mega-menu__list:not(.mega-menu__list.mega-menu__list--condensed) > li:hover {
+  background: none;
+  border: 1px solid tomato;
 }
 .mega-menu__list:not(.mega-menu__list.mega-menu__list--condensed) li .icon-arrow-link {
   display: none;
