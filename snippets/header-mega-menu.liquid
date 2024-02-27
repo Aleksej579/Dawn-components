@@ -54,7 +54,7 @@
                             <h3>Title 1</h3>
                             <p>Sub-title 2</p>
                             <ul class="list-unstyled" role="list">
-                              {%- for grandchildlink in childlink.links -%}
+                              {%- for grandchildlink in childlink.links limit: 4 -%}
                                 <li>
                                   <a
                                     id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
@@ -73,7 +73,7 @@
                             <h3>Title 2</h3>
                             <p>Sub-title 2</p>
                             <ul class="list-unstyled" role="list">
-                              {%- for grandchildlink in childlink.links -%}
+                              {%- for grandchildlink in childlink.links limit: 4 -%}
                                 <li>
                                   <a
                                     id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
@@ -94,6 +94,7 @@
                       </li>
                     {%- endfor -%}
                   </ul>
+                  <div class="mega-menu__wrapper-sub-link"></div>
                   <div class="mega-menu__link-inform"></div>
                 </div>
               </div>
@@ -123,28 +124,37 @@
 </nav>
 
 <script>
-  let megaMenuListLi = document.querySelectorAll('.mega-menu__list li');
-  megaMenuListLi.forEach((item) => {
-    item.addEventListener('mouseover', () => {
-      item.querySelector('.wrapper__list-unstyled').style.display = 'block';
-    });
-    item.addEventListener('mouseout', () => {
-      item.querySelector('.wrapper__list-unstyled').style.display = 'none';
-    });
-  });
+  window.addEventListener("load", () => {
+    let megaMenuWrapperSubLink = document.querySelector('.mega-menu__wrapper-sub-link');
+    let megaMenuListLi = document.querySelectorAll('.mega-menu__list li');
+    megaMenuListLi.forEach((item) => {
+      item.addEventListener('mouseover', () => {
+        megaMenuWrapperSubLink.innerHTML = '';
+        megaMenuWrapperSubLink.style.display = 'block';
+        megaMenuWrapperSubLink.appendChild(item.querySelector('.wrapper__list-unstyled').cloneNode(true));
 
-  let megaMenuLink = document.querySelectorAll('.mega-menu__link');
-  let megaMenuLinkInform = document.querySelector('.mega-menu__link-inform');
-  megaMenuLink.forEach((item) => {
-    item.addEventListener('mouseover', () => {
-      if (item.dataset.image) {
-        megaMenuLinkInform.innerHTML = `<img src='https://all-dev-theme.myshopify.com/cdn/shop/${item.dataset.image}' width=150>`;
-      } else {
-        megaMenuLinkInform.innerHTML = `<img src='https://cdn.shopify.com/s/files/1/0633/3225/3877/files/portfolio-layout-thumb1_af152011-4280-4ed1-9865-0bcca25d3ab6.jpg' width=150>`;
-      }
+        let megaMenuLink = document.querySelectorAll('.mega-menu__wrapper-sub-link a');
+        let megaMenuLinkInform = document.querySelector('.mega-menu__link-inform');
+        megaMenuLink.forEach((item) => {
+          item.addEventListener('mouseover', () => {
+            if (item.dataset.image) {
+              megaMenuLinkInform.innerHTML = `<img src='https://all-dev-theme.myshopify.com/cdn/shop/${item.dataset.image}' width=150>`;
+            } else {
+              megaMenuLinkInform.innerHTML = `<img src='https://cdn.shopify.com/s/files/1/0633/3225/3877/files/portfolio-layout-thumb1_af152011-4280-4ed1-9865-0bcca25d3ab6.jpg' width=150>`;
+            }
+          });
+          item.addEventListener('mouseout', () => {
+            megaMenuLinkInform.innerHTML = '';
+          });
+        });
+
+      });
+
+      item.addEventListener('mouseout', () => {
+        {% comment %} megaMenuWrapperSubLink.querySelector('.wrapper__list-unstyled').style.display = 'none'; {% endcomment %}
+      });
     });
-    item.addEventListener('mouseout', () => {
-      megaMenuLinkInform.innerHTML = '';
-    });
+
+    
   });
 </script>
