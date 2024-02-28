@@ -288,6 +288,23 @@
         "padding_bottom": 36
       }
     },
+    "featured_blog_rL67F7": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "Blog posts",
+        "heading_size": "h1",
+        "blog": "",
+        "post_limit": 3,
+        "columns_desktop": 3,
+        "color_scheme": "",
+        "show_image": true,
+        "show_date": true,
+        "show_author": false,
+        "show_view_all": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "featured_collection": {
       "type": "featured-collection",
       "settings": {
@@ -346,32 +363,15 @@
         "padding_bottom": 0
       }
     },
-    "featured_blog_rL67F7": {
-      "type": "featured-blog",
-      "settings": {
-        "heading": "Blog posts",
-        "heading_size": "h1",
-        "blog": "",
-        "post_limit": 3,
-        "columns_desktop": 3,
-        "color_scheme": "",
-        "show_image": true,
-        "show_date": true,
-        "show_author": false,
-        "show_view_all": true,
-        "padding_top": 36,
-        "padding_bottom": 36
-      }
-    },
     "collapsible_content_AkMTJV": {
       "type": "collapsible-content",
       "blocks": {
         "collapsible_row_GgjUmM": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "What is a promo code?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>This is a unique code that allows you to get a discount on products participating in the action.<\/p>",
             "page": ""
           }
         },
@@ -411,7 +411,7 @@
       ],
       "settings": {
         "caption": "",
-        "heading": "Collapsible content",
+        "heading": "FAQs",
         "heading_size": "h1",
         "heading_alignment": "center",
         "layout": "none",
@@ -442,9 +442,9 @@
     "image_with_text_aPftNt",
     "featured_collection_gVyckY",
     "collage",
+    "featured_blog_rL67F7",
     "featured_collection",
     "rich_text",
-    "featured_blog_rL67F7",
     "collapsible_content_AkMTJV",
     "contact_form_PDxjDi"
   ]
