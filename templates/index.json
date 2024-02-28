@@ -378,9 +378,9 @@
         "collapsible_row_jUiMQ9": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "How do I use a promo code?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>To get a discount, you need to enter a promo code in the special field in the order form when placing your order. After that, you need to click \"Apply\" and \"Checkout\". That's all! The discount is in your pocket.<\/p>",
             "page": ""
           }
         },
