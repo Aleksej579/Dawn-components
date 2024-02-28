@@ -387,9 +387,9 @@
         "collapsible_row_DqMqbt": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "After I wrote the review it did not appear on the site. Why?",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>Все отзывы проверяются модератором. Для того чтобы Ваш отзыв был опубликован, он должен быть информативен и корректно оформлен. Модератор вправе отклонять отзывы на свое усмотрение.<\/p>",
             "page": ""
           }
         },
