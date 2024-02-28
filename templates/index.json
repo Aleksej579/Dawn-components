@@ -396,9 +396,9 @@
         "collapsible_row_TBPxkt": {
           "type": "collapsible_row",
           "settings": {
-            "heading": "Collapsible row",
+            "heading": "I FORGOT MY PASSWORD!",
             "icon": "check_mark",
-            "row_content": "",
+            "row_content": "<p>If you are a registered user, but have forgotten your password - click on the link \"Login\" in the right corner of the site header. In the window that will open, click \"Remind password\", then an email with a temporary password will be sent to the email address you used when you registered. Using this password, you will be able to enter the site and change the password to any other in your personal cabinet.<\/p>",
             "page": ""
           }
         }
