@@ -122,19 +122,19 @@
       ],
       "settings": {
         "title": "",
-        "heading_size": "h1",
+        "heading_size": "h2",
         "image_width": "third",
         "image_ratio": "adapt",
         "columns_desktop": 4,
         "column_alignment": "center",
-        "background_style": "none",
+        "background_style": "primary",
         "button_label": "",
         "button_link": "",
         "color_scheme": "scheme-5",
         "columns_mobile": "1",
         "swipe_on_mobile": true,
-        "padding_top": 16,
-        "padding_bottom": 16
+        "padding_top": 12,
+        "padding_bottom": 12
       }
     },
     "image_with_text_hTyTCk": {
