@@ -224,7 +224,7 @@
     "featured_collection_gVyckY": {
       "type": "featured-collection",
       "settings": {
-        "title": "Featured collection",
+        "title": "Your collections",
         "heading_size": "h1",
         "description": "",
         "show_description": false,
