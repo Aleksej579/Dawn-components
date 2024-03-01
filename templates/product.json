@@ -22,6 +22,22 @@
             "text_style": "subtitle"
           }
         },
+        "trustshop_product_reviews_widget_product_rating_dAExtf": {
+          "type": "shopify:\/\/apps\/trustshop-product-reviews\/blocks\/widget-product-rating\/18b0c4cc-5411-4b6e-922d-34fdc2f30ab9",
+          "settings": {
+          }
+        },
+        "wishlist_myappgurus_pdp_wishlist_e3Mjy8": {
+          "type": "shopify:\/\/apps\/wishlist-myappgurus\/blocks\/pdp-wishlist\/c6177d6e-9cc4-45ab-abe5-45a6a5289882",
+          "settings": {
+            "show_wishlist_btn": true
+          }
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+          }
+        },
         "price": {
           "type": "price",
           "settings": {
@@ -44,11 +60,6 @@
           "settings": {
             "show_dynamic_checkout": true,
             "show_gift_card_recipient": true
-          }
-        },
-        "description": {
-          "type": "description",
-          "settings": {
           }
         },
         "collapsible-row-0": {
@@ -98,11 +109,13 @@
         "vendor",
         "title",
         "caption",
+        "trustshop_product_reviews_widget_product_rating_dAExtf",
+        "wishlist_myappgurus_pdp_wishlist_e3Mjy8",
+        "description",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
-        "description",
         "collapsible-row-0",
         "collapsible-row-1",
         "collapsible-row-2",
@@ -123,43 +136,6 @@
         "enable_video_looping": false,
         "padding_top": 36,
         "padding_bottom": 12
-      }
-    },
-    "image-with-text": {
-      "type": "image-with-text",
-      "blocks": {
-        "image-with-text-0": {
-          "type": "heading",
-          "settings": {
-            "heading": "Image with text",
-            "heading_size": "h1"
-          }
-        },
-        "image-with-text-1": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.<\/p>",
-            "text_style": "body"
-          }
-        }
-      },
-      "block_order": [
-        "image-with-text-0",
-        "image-with-text-1"
-      ],
-      "settings": {
-        "height": "small",
-        "desktop_image_width": "medium",
-        "layout": "text_first",
-        "desktop_content_position": "top",
-        "desktop_content_alignment": "left",
-        "content_layout": "no-overlap",
-        "section_color_scheme": "",
-        "color_scheme": "scheme-2",
-        "image_behavior": "none",
-        "mobile_content_alignment": "left",
-        "padding_top": 36,
-        "padding_bottom": 36
       }
     },
     "multicolumn": {
@@ -237,7 +213,6 @@
   },
   "order": [
     "main",
-    "image-with-text",
     "multicolumn",
     "tabs",
     "related-products"

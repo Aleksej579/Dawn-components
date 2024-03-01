@@ -30,43 +30,80 @@
                 class="mega-menu__content color-{{ section.settings.menu_color_scheme }} gradient motion-reduce global-settings-popup"
                 tabindex="-1"
               >
-                <ul
-                  class="mega-menu__list page-width{% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
-                  role="list"
-                >
-                  {%- for childlink in link.links -%}
-                    <li>
-                      <a
-                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
-                        href="{{ childlink.url }}"
-                        class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
-                        {% if childlink.current %}
-                          aria-current="page"
-                        {% endif %}
-                      >
-                        {{ childlink.title | escape }}
-                      </a>
-                      {%- if childlink.links != blank -%}
-                        <ul class="list-unstyled" role="list">
-                          {%- for grandchildlink in childlink.links -%}
-                            <li>
-                              <a
-                                id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
-                                href="{{ grandchildlink.url }}"
-                                class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
-                                {% if grandchildlink.current %}
-                                  aria-current="page"
-                                {% endif %}
-                              >
-                                {{ grandchildlink.title | escape }}
-                              </a>
-                            </li>
-                          {%- endfor -%}
-                        </ul>
-                      {%- endif -%}
-                    </li>
-                  {%- endfor -%}
-                </ul>
+                <div class="mega-menu__wrapper page-width">
+                  <ul
+                    class="mega-menu__list {% if link.levels == 1 %} mega-menu__list--condensed{% endif %}"
+                    role="list"
+                  >
+                    {%- for childlink in link.links -%}
+                      <li>
+                        <span class="icon-arrow-link"> ➝ </span>
+                        <a
+                          id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
+                          href="{{ childlink.url }}"
+                          class="mega-menu__link mega-menu__link--level-2 link{% if childlink.current %} mega-menu__link--active{% endif %}"
+                          {% if childlink.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          {{ childlink.title | escape }}
+                        </a>
+                        <div class="wrapper__list-unstyled">
+                          <h5>Top Sales</h5>
+                          <p>Find the best selling items, buy now and get a discount.</p>
+                          <ul class="list-unstyled" role="list">
+                            {% for product in childlink.object.products limit: 2 %}
+                              <li>
+                                <a
+                                  href="{{ product.url }}"
+                                  data-image="{{ product.featured_image }}"
+                                >
+                                  {{- product.title | truncate: 20 -}}
+                                </a>
+                              </li>
+                            {% endfor %}
+                          </ul>
+
+                          <h5>All products</h5>
+                          <p>Pick your product. Great variety, low prices, wide selection.</p>
+                          <ul class="list-unstyled" role="list">
+                            {% for product in childlink.object.products %}
+                              <li>
+                                <a
+                                  href="{{ product.url }}"
+                                  data-image="{{ product.featured_image }}"
+                                >
+                                  {{- product.title | truncate: 20 -}}
+                                </a>
+                              </li>
+                            {% endfor %}
+                          </ul>
+                        </div>
+
+                        {%- if childlink.links != blank -%}
+                          <ul class="list-unstyled" role="list">
+                            {%- for grandchildlink in childlink.links limit: 4 -%}
+                              <li>
+                                <a
+                                  id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}-{{ grandchildlink.handle }}"
+                                  href="{{ grandchildlink.url }}"
+                                  class="mega-menu__link link{% if grandchildlink.current %} mega-menu__link--active{% endif %}"
+                                  {% if grandchildlink.current %}
+                                    aria-current="page"
+                                  {% endif %}
+                                >
+                                  {{ grandchildlink.title | escape | truncate: 20 }}
+                                </a>
+                              </li>
+                            {%- endfor -%}
+                          </ul>
+                        {%- endif -%}
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                  <div class="mega-menu__wrapper-sub-link"></div>
+                  <div class="mega-menu__link-inform"></div>
+                </div>
               </div>
             </details>
           </header-menu>
@@ -92,3 +129,31 @@
     {%- endfor -%}
   </ul>
 </nav>
+
+<script>
+  window.addEventListener('load', () => {
+    let megaMenuWrapperSubLink = document.querySelector('.mega-menu__wrapper-sub-link');
+    let megaMenuListLi = document.querySelectorAll('.mega-menu__list li');
+    megaMenuListLi.forEach((item) => {
+      item.addEventListener('mouseover', () => {
+        megaMenuWrapperSubLink.innerHTML = '';
+        megaMenuWrapperSubLink.appendChild(item.querySelector('.wrapper__list-unstyled').cloneNode(true));
+        let megaMenuLink = document.querySelectorAll('.mega-menu__wrapper-sub-link a');
+        let megaMenuLinkInform = document.querySelector('.mega-menu__link-inform');
+        megaMenuLink.forEach((item) => {
+          item.addEventListener('mouseover', () => {
+            if (item.dataset.image) {
+              megaMenuLinkInform.innerHTML = `<img class="img-product" src='https://all-dev-theme.myshopify.com/cdn/shop/${item.dataset.image}' width=150>`;
+            } else {
+              megaMenuLinkInform.innerHTML = `<img class="img-product" src='https://cdn.shopify.com/s/files/1/0633/3225/3877/files/portfolio-layout-thumb1_af152011-4280-4ed1-9865-0bcca25d3ab6.jpg' width=150>`;
+            }
+          });
+          item.addEventListener('mouseout', () => {
+            megaMenuLinkInform.innerHTML = '';
+          });
+        });
+      });
+      item.addEventListener('mouseout', () => {});
+    });
+  });
+</script>

@@ -235,7 +235,16 @@
       {%- endif -%}
     {%- endif -%}
 
+
     <div class="header__icons{% if section.settings.enable_country_selector or section.settings.enable_language_selector %} header__icons--localization header-localization{% endif %}">
+
+    {% if customer %}
+      Hello, {{ customer.first_name }}!
+      {{ 'Log out' | customer_logout_link }}
+    {% else %}
+      {{ 'Log in' | customer_login_link }}
+    {% endif %}
+
       <div class="desktop-localization-wrapper">
         {%- if section.settings.enable_country_selector and localization.available_countries.size > 1 -%}
           <noscript class="small-hide medium-hide">

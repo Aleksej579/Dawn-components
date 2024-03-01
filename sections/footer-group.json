@@ -5,6 +5,14 @@
     "footer": {
       "type": "footer",
       "blocks": {
+        "image_YMDUGj": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ava.png",
+            "image_width": 100,
+            "alignment": "center"
+          }
+        },
         "footer-0": {
           "type": "link_list",
           "settings": {
@@ -28,6 +36,7 @@
         }
       },
       "block_order": [
+        "image_YMDUGj",
         "footer-0",
         "footer-1",
         "footer-2"
