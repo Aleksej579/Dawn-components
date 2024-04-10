@@ -15,6 +15,12 @@
           "settings": {
           }
         },
+        "live_product_options_app_block_YCRhBR": {
+          "type": "shopify:\/\/apps\/live-product-options\/blocks\/app-block\/88bfdf40-5e27-4962-a966-70c8d1e87757",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
         "caption": {
           "type": "text",
           "settings": {
@@ -108,6 +114,7 @@
       "block_order": [
         "vendor",
         "title",
+        "live_product_options_app_block_YCRhBR",
         "caption",
         "trustshop_product_reviews_widget_product_rating_dAExtf",
         "wishlist_myappgurus_pdp_wishlist_e3Mjy8",
