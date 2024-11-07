@@ -1,6 +1,15 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "current": {
-    "logo": "shopify:\/\/shop_images\/ava.png",
+    "logo": "shopify://shop_images/ava.png",
     "logo_width": 70,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -132,15 +141,15 @@
     ],
     "blocks": {
       "1166917345295625399": {
-        "type": "shopify:\/\/apps\/wishlist-myappgurus\/blocks\/wishlist\/c6177d6e-9cc4-45ab-abe5-45a6a5289882",
+        "type": "shopify://apps/wishlist-myappgurus/blocks/wishlist/c6177d6e-9cc4-45ab-abe5-45a6a5289882",
         "disabled": false,
         "settings": {
           "visible_page_button": true,
           "target_class": ""
         }
       },
-      "1787840288555608609": {
-        "type": "shopify:\/\/apps\/live-product-options\/blocks\/app-embed\/88bfdf40-5e27-4962-a966-70c8d1e87757",
+      "6987625696575125306": {
+        "type": "shopify://apps/weglot-translate-your-store/blocks/weglot/3097482a-fafe-42ff-bc33-ea19e35c4a20",
         "disabled": false,
         "settings": {
         }
