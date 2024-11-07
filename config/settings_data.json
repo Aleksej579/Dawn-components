@@ -285,19 +285,6 @@
         "disabled": false,
         "settings": {}
       },
-      "14094420250765385864": {
-        "type": "shopify://apps/g-translate/blocks/popup/408a74ac-f92d-43cf-a1b1-a044341e66bd",
-        "disabled": true,
-        "settings": {
-          "horizontal_position": "left",
-          "vertical_position": "bottom",
-          "native_language_names": true,
-          "flag_size": "32",
-          "flag_style": "2d",
-          "wrapper_selector": "",
-          "custom_css": ""
-        }
-      },
       "3847134708050210359": {
         "type": "shopify://apps/transcy/blocks/switcher_embed_block/bce4f1c0-c18c-43b0-b0b2-a1aefaa44573",
         "disabled": true,
@@ -323,8 +310,21 @@
       },
       "18146506648094396618": {
         "type": "shopify://apps/langshop/blocks/sdk/84899e01-2b29-42af-99d6-46d16daa2111",
-        "disabled": false,
+        "disabled": true,
         "settings": {}
+      },
+      "14094420250765385864": {
+        "type": "shopify://apps/g-translate/blocks/popup/408a74ac-f92d-43cf-a1b1-a044341e66bd",
+        "disabled": false,
+        "settings": {
+          "horizontal_position": "left",
+          "vertical_position": "bottom",
+          "native_language_names": true,
+          "flag_size": "32",
+          "flag_style": "2d",
+          "wrapper_selector": "",
+          "custom_css": ""
+        }
       }
     },
     "color_schemes": {
