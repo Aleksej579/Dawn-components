@@ -293,24 +293,6 @@
           "custom_css": ""
         }
       },
-      "14094420250765385864": {
-        "type": "shopify://apps/g-translate/blocks/popup/408a74ac-f92d-43cf-a1b1-a044341e66bd",
-        "disabled": false,
-        "settings": {
-          "horizontal_position": "left",
-          "vertical_position": "bottom",
-          "native_language_names": true,
-          "flag_size": "32",
-          "flag_style": "2d",
-          "wrapper_selector": "",
-          "custom_css": ""
-        }
-      },
-      "9670189827046205946": {
-        "type": "shopify://apps/hextom-translate-and-currency/blocks/app-block/b927a799-be04-4b97-9efb-5c8f0290a68e",
-        "disabled": false,
-        "settings": {}
-      },
       "18128612654622612671": {
         "type": "shopify://apps/selecty/blocks/app-embed/a005a4a7-4aa2-4155-9c2b-0ab41acbf99c",
         "disabled": true,
@@ -325,6 +307,24 @@
         "type": "shopify://apps/geofly-lang-market-selector/blocks/mlveda-market-head/a0c601f6-9804-4907-9fbe-72ea549c04ee",
         "disabled": true,
         "settings": {}
+      },
+      "9670189827046205946": {
+        "type": "shopify://apps/hextom-translate-and-currency/blocks/app-block/b927a799-be04-4b97-9efb-5c8f0290a68e",
+        "disabled": true,
+        "settings": {}
+      },
+      "14094420250765385864": {
+        "type": "shopify://apps/g-translate/blocks/popup/408a74ac-f92d-43cf-a1b1-a044341e66bd",
+        "disabled": true,
+        "settings": {
+          "horizontal_position": "left",
+          "vertical_position": "bottom",
+          "native_language_names": true,
+          "flag_size": "32",
+          "flag_style": "2d",
+          "wrapper_selector": "",
+          "custom_css": ""
+        }
       }
     },
     "color_schemes": {
