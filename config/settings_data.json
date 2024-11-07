@@ -290,11 +290,6 @@
         "disabled": false,
         "settings": {}
       },
-      "11268660566508010497": {
-        "type": "shopify://apps/geofly-lang-market-selector/blocks/mlveda-market-head/a0c601f6-9804-4907-9fbe-72ea549c04ee",
-        "disabled": true,
-        "settings": {}
-      },
       "14094420250765385864": {
         "type": "shopify://apps/g-translate/blocks/popup/408a74ac-f92d-43cf-a1b1-a044341e66bd",
         "disabled": true,
@@ -325,6 +320,11 @@
           "visible_page_button": true,
           "target_class": ""
         }
+      },
+      "11268660566508010497": {
+        "type": "shopify://apps/geofly-lang-market-selector/blocks/mlveda-market-head/a0c601f6-9804-4907-9fbe-72ea549c04ee",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
