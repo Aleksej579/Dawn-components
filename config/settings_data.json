@@ -325,6 +325,48 @@
         "type": "shopify://apps/langshop/blocks/sdk/84899e01-2b29-42af-99d6-46d16daa2111",
         "disabled": false,
         "settings": {}
+      },
+      "14137321316871887338": {
+        "type": "shopify://apps/locales-ai/blocks/locales-switcher/c920c59b-40a9-483d-987f-fc04b7101f48",
+        "disabled": false,
+        "settings": {}
+      },
+      "11609658749665769140": {
+        "type": "shopify://apps/locales-ai/blocks/inline-trans/c920c59b-40a9-483d-987f-fc04b7101f48",
+        "disabled": false,
+        "settings": {}
+      },
+      "4777958630934280373": {
+        "type": "shopify://apps/blaze-geolocation-redirect/blocks/MarketGeo-Pro/205ccaa8-b0b9-4ec5-bc1f-4496c01c7117",
+        "disabled": true,
+        "settings": {
+          "test_mode": false,
+          "blz_country_flag_enabled": false,
+          "resource": "country",
+          "blz_title_innerHTML": "Choose your location",
+          "blz_title_font-size": 20,
+          "blz_title_text-align": "center",
+          "blz_title_color": "#000000",
+          "blz_body_innerHTML": "Please select your shipping destination country",
+          "blz_body_font-size": 16,
+          "blz_body_text-align": "center",
+          "blz_body_color": "#000000",
+          "blz_button_CTA_innerHTML": "Confirm",
+          "blz_button_CTA_addclasses": "filled",
+          "blz_storeSelector__cta_addclasses": "full_width",
+          "blz_button_CTA_color": "#D6C7C7",
+          "blz_button_CTA_background": "#000000",
+          "blz_button_CTA_border-color": "#000000",
+          "blz_button_CTA_border-radius": 5,
+          "blz_label_country_innerHTML": "Country",
+          "blz_label_language_innerHTML": "Language",
+          "blz_store_selector_select_addclasses": "blz_border__outline",
+          "blz_storeSelector_component_background": "#ffffff",
+          "blz_storeSelector_component_border-radius": 5,
+          "blz_action__close_display": false,
+          "blur_background": false,
+          "blz_Selector__custom_css": ""
+        }
       }
     },
     "color_schemes": {
