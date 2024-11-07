@@ -285,16 +285,6 @@
         "disabled": false,
         "settings": {}
       },
-      "3847134708050210359": {
-        "type": "shopify://apps/transcy/blocks/switcher_embed_block/bce4f1c0-c18c-43b0-b0b2-a1aefaa44573",
-        "disabled": true,
-        "settings": {}
-      },
-      "6987625696575125306": {
-        "type": "shopify://apps/weglot-translate-your-store/blocks/weglot/3097482a-fafe-42ff-bc33-ea19e35c4a20",
-        "disabled": true,
-        "settings": {}
-      },
       "1166917345295625399": {
         "type": "shopify://apps/wishlist-myappgurus/blocks/wishlist/c6177d6e-9cc4-45ab-abe5-45a6a5289882",
         "disabled": false,
@@ -313,9 +303,14 @@
         "disabled": true,
         "settings": {}
       },
+      "3847134708050210359": {
+        "type": "shopify://apps/transcy/blocks/switcher_embed_block/bce4f1c0-c18c-43b0-b0b2-a1aefaa44573",
+        "disabled": false,
+        "settings": {}
+      },
       "14094420250765385864": {
         "type": "shopify://apps/g-translate/blocks/popup/408a74ac-f92d-43cf-a1b1-a044341e66bd",
-        "disabled": false,
+        "disabled": true,
         "settings": {
           "horizontal_position": "left",
           "vertical_position": "bottom",
@@ -325,6 +320,11 @@
           "wrapper_selector": "",
           "custom_css": ""
         }
+      },
+      "6987625696575125306": {
+        "type": "shopify://apps/weglot-translate-your-store/blocks/weglot/3097482a-fafe-42ff-bc33-ea19e35c4a20",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
