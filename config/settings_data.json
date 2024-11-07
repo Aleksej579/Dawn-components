@@ -311,11 +311,6 @@
         "disabled": false,
         "settings": {}
       },
-      "11268660566508010497": {
-        "type": "shopify://apps/geofly-lang-market-selector/blocks/mlveda-market-head/a0c601f6-9804-4907-9fbe-72ea549c04ee",
-        "disabled": false,
-        "settings": {}
-      },
       "18128612654622612671": {
         "type": "shopify://apps/selecty/blocks/app-embed/a005a4a7-4aa2-4155-9c2b-0ab41acbf99c",
         "disabled": true,
@@ -323,6 +318,11 @@
       },
       "18146506648094396618": {
         "type": "shopify://apps/langshop/blocks/sdk/84899e01-2b29-42af-99d6-46d16daa2111",
+        "disabled": true,
+        "settings": {}
+      },
+      "11268660566508010497": {
+        "type": "shopify://apps/geofly-lang-market-selector/blocks/mlveda-market-head/a0c601f6-9804-4907-9fbe-72ea549c04ee",
         "disabled": true,
         "settings": {}
       }
