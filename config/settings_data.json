@@ -338,10 +338,10 @@
       },
       "4777958630934280373": {
         "type": "shopify://apps/blaze-geolocation-redirect/blocks/MarketGeo-Pro/205ccaa8-b0b9-4ec5-bc1f-4496c01c7117",
-        "disabled": false,
+        "disabled": true,
         "settings": {
-          "test_mode": true,
-          "blz_country_flag_enabled": true,
+          "test_mode": false,
+          "blz_country_flag_enabled": false,
           "resource": "country",
           "blz_title_innerHTML": "Choose your location",
           "blz_title_font-size": 20,
