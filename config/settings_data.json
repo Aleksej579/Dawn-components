@@ -338,10 +338,10 @@
       },
       "4777958630934280373": {
         "type": "shopify://apps/blaze-geolocation-redirect/blocks/MarketGeo-Pro/205ccaa8-b0b9-4ec5-bc1f-4496c01c7117",
-        "disabled": true,
+        "disabled": false,
         "settings": {
-          "test_mode": false,
-          "blz_country_flag_enabled": false,
+          "test_mode": true,
+          "blz_country_flag_enabled": true,
           "resource": "country",
           "blz_title_innerHTML": "Choose your location",
           "blz_title_font-size": 20,
@@ -354,7 +354,7 @@
           "blz_button_CTA_innerHTML": "Confirm",
           "blz_button_CTA_addclasses": "filled",
           "blz_storeSelector__cta_addclasses": "full_width",
-          "blz_button_CTA_color": "#D6C7C7",
+          "blz_button_CTA_color": "#d6c7c7",
           "blz_button_CTA_background": "#000000",
           "blz_button_CTA_border-color": "#000000",
           "blz_button_CTA_border-radius": 5,
