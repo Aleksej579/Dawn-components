@@ -288,54 +288,6 @@
           "target_class": ""
         }
       },
-      "11268660566508010497": {
-        "type": "shopify://apps/geofly-lang-market-selector/blocks/mlveda-market-head/a0c601f6-9804-4907-9fbe-72ea549c04ee",
-        "disabled": false,
-        "settings": {}
-      },
-      "3847134708050210359": {
-        "type": "shopify://apps/transcy/blocks/switcher_embed_block/bce4f1c0-c18c-43b0-b0b2-a1aefaa44573",
-        "disabled": false,
-        "settings": {}
-      },
-      "6987625696575125306": {
-        "type": "shopify://apps/weglot-translate-your-store/blocks/weglot/3097482a-fafe-42ff-bc33-ea19e35c4a20",
-        "disabled": false,
-        "settings": {}
-      },
-      "14094420250765385864": {
-        "type": "shopify://apps/g-translate/blocks/popup/408a74ac-f92d-43cf-a1b1-a044341e66bd",
-        "disabled": false,
-        "settings": {
-          "horizontal_position": "left",
-          "vertical_position": "bottom",
-          "native_language_names": true,
-          "flag_size": "32",
-          "flag_style": "2d",
-          "wrapper_selector": "",
-          "custom_css": ""
-        }
-      },
-      "18128612654622612671": {
-        "type": "shopify://apps/selecty/blocks/app-embed/a005a4a7-4aa2-4155-9c2b-0ab41acbf99c",
-        "disabled": false,
-        "settings": {}
-      },
-      "18146506648094396618": {
-        "type": "shopify://apps/langshop/blocks/sdk/84899e01-2b29-42af-99d6-46d16daa2111",
-        "disabled": false,
-        "settings": {}
-      },
-      "14137321316871887338": {
-        "type": "shopify://apps/locales-ai/blocks/locales-switcher/c920c59b-40a9-483d-987f-fc04b7101f48",
-        "disabled": false,
-        "settings": {}
-      },
-      "11609658749665769140": {
-        "type": "shopify://apps/locales-ai/blocks/inline-trans/c920c59b-40a9-483d-987f-fc04b7101f48",
-        "disabled": false,
-        "settings": {}
-      },
       "4777958630934280373": {
         "type": "shopify://apps/blaze-geolocation-redirect/blocks/MarketGeo-Pro/205ccaa8-b0b9-4ec5-bc1f-4496c01c7117",
         "disabled": true,
@@ -367,6 +319,54 @@
           "blur_background": false,
           "blz_Selector__custom_css": ""
         }
+      },
+      "11609658749665769140": {
+        "type": "shopify://apps/locales-ai/blocks/inline-trans/c920c59b-40a9-483d-987f-fc04b7101f48",
+        "disabled": true,
+        "settings": {}
+      },
+      "14137321316871887338": {
+        "type": "shopify://apps/locales-ai/blocks/locales-switcher/c920c59b-40a9-483d-987f-fc04b7101f48",
+        "disabled": true,
+        "settings": {}
+      },
+      "18128612654622612671": {
+        "type": "shopify://apps/selecty/blocks/app-embed/a005a4a7-4aa2-4155-9c2b-0ab41acbf99c",
+        "disabled": true,
+        "settings": {}
+      },
+      "18146506648094396618": {
+        "type": "shopify://apps/langshop/blocks/sdk/84899e01-2b29-42af-99d6-46d16daa2111",
+        "disabled": true,
+        "settings": {}
+      },
+      "11268660566508010497": {
+        "type": "shopify://apps/geofly-lang-market-selector/blocks/mlveda-market-head/a0c601f6-9804-4907-9fbe-72ea549c04ee",
+        "disabled": true,
+        "settings": {}
+      },
+      "3847134708050210359": {
+        "type": "shopify://apps/transcy/blocks/switcher_embed_block/bce4f1c0-c18c-43b0-b0b2-a1aefaa44573",
+        "disabled": true,
+        "settings": {}
+      },
+      "14094420250765385864": {
+        "type": "shopify://apps/g-translate/blocks/popup/408a74ac-f92d-43cf-a1b1-a044341e66bd",
+        "disabled": true,
+        "settings": {
+          "horizontal_position": "left",
+          "vertical_position": "bottom",
+          "native_language_names": true,
+          "flag_size": "32",
+          "flag_style": "2d",
+          "wrapper_selector": "",
+          "custom_css": ""
+        }
+      },
+      "6987625696575125306": {
+        "type": "shopify://apps/weglot-translate-your-store/blocks/weglot/3097482a-fafe-42ff-bc33-ea19e35c4a20",
+        "disabled": true,
+        "settings": {}
       }
     },
     "color_schemes": {
