@@ -136,9 +136,7 @@
         }
       }
     },
-    "content_for_index": [
-
-    ],
+    "content_for_index": [],
     "blocks": {
       "1166917345295625399": {
         "type": "shopify://apps/wishlist-myappgurus/blocks/wishlist/c6177d6e-9cc4-45ab-abe5-45a6a5289882",
@@ -151,14 +149,12 @@
       "6987625696575125306": {
         "type": "shopify://apps/weglot-translate-your-store/blocks/weglot/3097482a-fafe-42ff-bc33-ea19e35c4a20",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "3847134708050210359": {
         "type": "shopify://apps/transcy/blocks/switcher_embed_block/bce4f1c0-c18c-43b0-b0b2-a1aefaa44573",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "6623373142120236592": {
         "type": "shopify://apps/g-translate/blocks/lang_names/408a74ac-f92d-43cf-a1b1-a044341e66bd",
@@ -313,26 +309,22 @@
       "9670189827046205946": {
         "type": "shopify://apps/hextom-translate-and-currency/blocks/app-block/b927a799-be04-4b97-9efb-5c8f0290a68e",
         "disabled": false,
-        "settings": {
-        }
-      },
-      "18128612654622612671": {
-        "type": "shopify://apps/selecty/blocks/app-embed/a005a4a7-4aa2-4155-9c2b-0ab41acbf99c",
-        "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "18146506648094396618": {
         "type": "shopify://apps/langshop/blocks/sdk/84899e01-2b29-42af-99d6-46d16daa2111",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
       },
       "11268660566508010497": {
         "type": "shopify://apps/geofly-lang-market-selector/blocks/mlveda-market-head/a0c601f6-9804-4907-9fbe-72ea549c04ee",
         "disabled": false,
-        "settings": {
-        }
+        "settings": {}
+      },
+      "18128612654622612671": {
+        "type": "shopify://apps/selecty/blocks/app-embed/a005a4a7-4aa2-4155-9c2b-0ab41acbf99c",
+        "disabled": true,
+        "settings": {}
       }
     },
     "color_schemes": {
