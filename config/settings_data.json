@@ -275,11 +275,6 @@
           "custom_css": ""
         }
       },
-      "18128612654622612671": {
-        "type": "shopify://apps/selecty/blocks/app-embed/a005a4a7-4aa2-4155-9c2b-0ab41acbf99c",
-        "disabled": true,
-        "settings": {}
-      },
       "9670189827046205946": {
         "type": "shopify://apps/hextom-translate-and-currency/blocks/app-block/b927a799-be04-4b97-9efb-5c8f0290a68e",
         "disabled": false,
@@ -296,11 +291,6 @@
       "11268660566508010497": {
         "type": "shopify://apps/geofly-lang-market-selector/blocks/mlveda-market-head/a0c601f6-9804-4907-9fbe-72ea549c04ee",
         "disabled": false,
-        "settings": {}
-      },
-      "18146506648094396618": {
-        "type": "shopify://apps/langshop/blocks/sdk/84899e01-2b29-42af-99d6-46d16daa2111",
-        "disabled": true,
         "settings": {}
       },
       "3847134708050210359": {
@@ -325,6 +315,16 @@
           "wrapper_selector": "",
           "custom_css": ""
         }
+      },
+      "18128612654622612671": {
+        "type": "shopify://apps/selecty/blocks/app-embed/a005a4a7-4aa2-4155-9c2b-0ab41acbf99c",
+        "disabled": false,
+        "settings": {}
+      },
+      "18146506648094396618": {
+        "type": "shopify://apps/langshop/blocks/sdk/84899e01-2b29-42af-99d6-46d16daa2111",
+        "disabled": false,
+        "settings": {}
       }
     },
     "color_schemes": {
