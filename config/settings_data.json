@@ -309,6 +309,12 @@
           "wrapper_selector": "",
           "custom_css": ""
         }
+      },
+      "9670189827046205946": {
+        "type": "shopify://apps/hextom-translate-and-currency/blocks/app-block/b927a799-be04-4b97-9efb-5c8f0290a68e",
+        "disabled": false,
+        "settings": {
+        }
       }
     },
     "color_schemes": {
